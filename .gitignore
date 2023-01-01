@@ -3,3 +3,8 @@ __pycache__/
 *.sqlite3
 *.csv
 trees/static/trees/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
