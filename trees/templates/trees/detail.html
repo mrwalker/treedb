@@ -1,0 +1,20 @@
+<h1>{{ tree.title }}</h1>
+<div>
+  <p>{{ tree.description }}</p>
+</div>
+<div>
+  <ul>
+    <li><a href="{% url 'trees:qrcode' tree.id %}">QR code</a></li>
+    <li><a href="{% url 'trees:index' %}">Tree list</a></li>
+  </ul>
+</div>
+<div>
+  <h2>Location</h2>
+  <p>Site: {{ tree.site }}</p>
+  <p>Coordinates: {{ tree.location_lat}}, {{ tree.location_lon }}</p>
+</div>
+<div>
+  <h2>Tree info</h2>
+  <p>Texas Tree Planting Guide <a href="{{ tree.species }}">page</a></p>
+  <p>DBH (inches): {{ tree.diameter_at_breast_height }}</p>
+</div>

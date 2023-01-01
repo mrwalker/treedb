@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TreeDB: Full Inventory</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css'%}" />
+    <script type="module" src="{% static 'index.js' %}"></script>
+  </head>
+  <body>
+    <h3>TreeDB</h3>
+    <div>
+    {% if latest_updated_trees %}
+        <p>Select your trees from the map below</p>
+    {% else %}
+        <p>No trees are available</p>
+    {% endif %}
+    </div>
+
+    <h3>Tree Map</h3>
+    <div id="map"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbt8Ci03q9uRWLMhEVs0B2M5ekdHulcQo&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
